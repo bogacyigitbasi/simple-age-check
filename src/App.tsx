@@ -4,30 +4,33 @@ import './App.css';
 import './Connect';
 import { useState } from "react";
 import Connect from './Connect';
-
+import Footer from './Footer'
+import BeerStore from './BeerStore';
+import { Container, Typography, Box, Link } from '@mui/material';
 function App() {
   const [isConnected, setConnected] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <Connect
-          onConnected={() => setConnected(true)}
-          onDisconnected={() => setConnected(false)}
-        />
-      </header>
-    </div>
+
+      <Connect
+        onConnected={() => setConnected(true)}
+        onDisconnected={() => setConnected(false)}
+      />
+
+
+      <Container sx={{ mt: 15 }}>
+        {isConnected && <BeerStore />}
+      </Container>
+
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Footer />
+      </Box>
+    </div >
   );
 }
 
