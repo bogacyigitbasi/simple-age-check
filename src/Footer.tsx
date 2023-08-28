@@ -15,7 +15,7 @@ export default function BeerStore() {
             <Typography textAlign={"center"} sx={{ color: "white" }}>
                 <Link
                     sx={{ color: "black" }}
-                    href="www.concordium.com"
+                    href="https://www.concordium.com"
                     target={"_blank"}
                     rel="noreferer">
                     Visit the Concordium to find out more!

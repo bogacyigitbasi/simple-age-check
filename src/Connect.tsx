@@ -50,6 +50,7 @@ export default function Connect(props: {
     }
 
 
+
     return (
         <AppBar style={{ background: '#00321E' }}>
             <Toolbar>
@@ -57,12 +58,8 @@ export default function Connect(props: {
                     Amazing Beer Store!
                 </Typography>
                 <Button color="inherit" onClick={connect}>
-                    {isConnected ? "Wallet:" + address : "Connect"}
+                    {isConnected ? "Wallet Address: " + address.substring(0, 12) + "..." : "Connect"}
                 </Button>
-
-                {/* <Button color="inherit" onClick={connect} disabled={!isConnected}>
-                    {isConnected ? "Connected" : "Connect"}
-                </Button> */}
             </Toolbar>
         </AppBar >
     );
