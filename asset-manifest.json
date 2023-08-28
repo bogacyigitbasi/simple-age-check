@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bogacyigitbasi.github.io/simple-age-check/static/css/main.1ebae4bb.css",
-    "main.js": "/bogacyigitbasi.github.io/simple-age-check/static/js/main.fa4a3db5.js",
-    "static/js/787.695fe0bb.chunk.js": "/bogacyigitbasi.github.io/simple-age-check/static/js/787.695fe0bb.chunk.js",
-    "static/media/beers.png": "/bogacyigitbasi.github.io/simple-age-check/static/media/beers.0d79789b1d7c3e4512d3.png",
-    "index.html": "/bogacyigitbasi.github.io/simple-age-check/index.html",
-    "main.1ebae4bb.css.map": "/bogacyigitbasi.github.io/simple-age-check/static/css/main.1ebae4bb.css.map",
-    "main.fa4a3db5.js.map": "/bogacyigitbasi.github.io/simple-age-check/static/js/main.fa4a3db5.js.map",
-    "787.695fe0bb.chunk.js.map": "/bogacyigitbasi.github.io/simple-age-check/static/js/787.695fe0bb.chunk.js.map"
+    "main.css": "/bogacyigitbasi.github.io/static/css/main.1ebae4bb.css",
+    "main.js": "/bogacyigitbasi.github.io/static/js/main.ffb8a93a.js",
+    "static/js/787.695fe0bb.chunk.js": "/bogacyigitbasi.github.io/static/js/787.695fe0bb.chunk.js",
+    "static/media/beers.png": "/bogacyigitbasi.github.io/static/media/beers.0d79789b1d7c3e4512d3.png",
+    "index.html": "/bogacyigitbasi.github.io/index.html",
+    "main.1ebae4bb.css.map": "/bogacyigitbasi.github.io/static/css/main.1ebae4bb.css.map",
+    "main.ffb8a93a.js.map": "/bogacyigitbasi.github.io/static/js/main.ffb8a93a.js.map",
+    "787.695fe0bb.chunk.js.map": "/bogacyigitbasi.github.io/static/js/787.695fe0bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ebae4bb.css",
-    "static/js/main.fa4a3db5.js"
+    "static/js/main.ffb8a93a.js"
   ]
 }
