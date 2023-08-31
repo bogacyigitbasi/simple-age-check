@@ -1,14 +1,14 @@
-import { AppBar, Toolbar, Card, CardMedia, Typography, Link, Box, Button } from "@mui/material";
-import { useState } from "react";
-
-
+import { AppBar, Typography, Link, Box } from "@mui/material";
 export default function BeerStore() {
     return (
         <Box
             sx={{
                 borderTop: "1px solid #000",
-                marginTop: "auto",
+                marginTop: 2,
+                marginLeft: -30,
                 p: 4,
+                width: 'max'
+
             }}
             component="footer"
         >
