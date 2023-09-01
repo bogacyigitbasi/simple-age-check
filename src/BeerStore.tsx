@@ -2,9 +2,9 @@ import {
     detectConcordiumProvider,
     WalletApi,
 } from "@concordium/browser-wallet-api-helpers";
-import { Toolbar, Grid, Dialog, DialogTitle, DialogActions, Stack, Alert, Button } from "@mui/material";
+import { Toolbar, Grid, Dialog, DialogTitle, DialogActions, Typography, Link, Stack, Alert, Button, createMuiTheme, Card } from "@mui/material";
 import { useState } from "react";
-
+import Connect from "./Connect";
 import beers from './image/beers.png';
 
 import {
@@ -22,7 +22,17 @@ export default function BeerStore() {
     const handleClose = () => {
         setOpen(false);
     };
+    const [isConnected, setConnected] = useState(false);
+
     async function age_check() {
+        {
+            < Connect
+                onConnected={() => setConnected(true)
+                }
+                onDisconnected={() => setConnected(false)}
+            />
+        }
+
         const provider = await detectConcordiumProvider();
         const account = await provider.connect() as string;
         if (!account) {
@@ -46,32 +56,66 @@ export default function BeerStore() {
                 // alert("Age verification was not completed. Please complete the verification")
             })
     }
-
     return (
         <Toolbar>
-            <Stack>
-                <Grid sx={{ mt: 0, ml: 20 }}>
-                    {
-                        !isVerified ?
-                            <h2>Click the button below to verify your age!</h2>
-                            :
-                            ""
-                    }
-
+            <Stack >
+                <Grid sx={{ flexGrow: 1, mt: 0, color: 'white', ml: 45 }}>
+                    <Grid sx={{ mt: 0, color: 'white', ml: 'auto' }}>
+                        {
+                            !isVerified ?
+                                <Typography variant="h4" component="div" sx={{ flexGrow: 1, mt: 1, ml: 'auto' }}>
+                                    Click to verify your age!
+                                </Typography>
+                                :
+                                ""
+                        }
+                    </Grid>
+                    <Grid sx={{ flexGrow: 1, ml: 'auto', mt: 5 }}>
+                        <Button fullWidth color="inherit" onClick={age_check} disabled={isVerified} size="large" style={{ color: 'white', border: '2px solid', alignSelf: 'auto', display: isVerified ? "none" : "block" }}>
+                            VERIFY
+                        </Button>
+                        <Grid sx={{ mt: 4 }}>
+                            <Typography variant="h5" component="div" sx={{ flexGrow: 1, mt: 1, ml: 'auto' }}>
+                                <Link
+                                    sx={{ color: "white" }}
+                                    href="https://www.concordium.com"
+                                    target={"_blank"}
+                                    rel="noreferer">
+                                    Read more!
+                                </Link>
+                            </Typography>
+                        </Grid>
+                    </Grid >
                 </Grid>
-                <Grid sx={{ mt: 0, ml: 40 }}>
-
-                    <Button color="inherit" onClick={age_check} variant="contained" disabled={isVerified} style={{ alignSelf: 'auto', display: isVerified ? "none" : "block" }}>
-                        Buy some beers!
-                    </Button>
-                </Grid >
                 <Grid>
                     {
                         isVerified ?
-                            <Grid sx={{ mt: -20, ml: -30 }}>
-                                <img src={beers}></img>
-                            </Grid>
+                            <Grid>
+                                <Grid sx={{ mt: -30, ml: 'auto' }}>
+                                    <Grid>
+                                        <img src={beers}></img>
+                                        <script>
+                                            {
+                                                document.body.style.backgroundColor = "white"
+                                            }
+                                        </script>
 
+                                    </Grid>
+                                    <Grid sx={{ mt: 4 }}>
+                                        <Typography variant="h5" component="div" sx={{ flexGrow: 1, mt: 1, ml: 'auto' }}>
+                                            <Link
+                                                sx={{ color: "black" }}
+                                                href="https://www.concordium.com"
+                                                target={"_blank"}
+                                                rel="noreferer">
+                                                Read more!
+                                            </Link>
+                                        </Typography>
+
+                                    </Grid>
+
+                                </Grid>
+                            </Grid>
                             : ""
                     }
                     {
@@ -90,6 +134,7 @@ export default function BeerStore() {
                             </Dialog>
                             : ""
                     }
+
                 </Grid>
             </Stack>
         </Toolbar >

@@ -3,9 +3,7 @@ export default function BeerStore() {
     return (
         <Box
             sx={{
-                borderTop: "1px solid #000",
                 marginTop: 2,
-                marginLeft: -30,
                 p: 4,
                 width: 'max'
 
@@ -14,11 +12,11 @@ export default function BeerStore() {
         >
             <Typography textAlign={"center"} sx={{ color: "white" }}>
                 <Link
-                    sx={{ color: "black" }}
+                    sx={{ color: "white" }}
                     href="https://www.concordium.com"
                     target={"_blank"}
                     rel="noreferer">
-                    Visit the Concordium to find out more!
+                    Read more!
                 </Link>
             </Typography>
 

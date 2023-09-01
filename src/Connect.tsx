@@ -55,7 +55,7 @@ export default function Connect(props: {
         <AppBar style={{ background: '#00321E' }}>
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 'auto' }}>
-                    Amazing Beer Store!
+                    Beer Store!
                 </Typography>
                 <Button color="inherit" onClick={connect}>
                     {isConnected ? "Wallet Address: " + address.substring(0, 10) + "..." : "Connect"}
